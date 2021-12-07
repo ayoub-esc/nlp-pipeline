@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+   <head>
+      <title>NLP Pipeline for Unstructured Clincal Data</title>
+      <style>
+         body {
+         background-color: lightgrey;
+         }
+         h3 { text-align: center }
+         input[type="submit"]{ 
+         cursor: pointer; 
+         color: #ffffff !important;
+         background-color: #3e3e3e !important;
+         height:50px;
+         width:120px;
+         border: none;
+         outline: none;
+         border-radius: 16px;
+         font-size: 14px;
+         } 
+         .center {
+         margin:auto;
+         text-align:center;
+         }
+         .center-bottom {
+         position:absolute;
+         text-align:center;
+         top: 344px;
+         left: 65%;
+         }
+         textarea {
+         border: 2px solid black;
+         width: 450px;
+         height: 250px;
+         padding: 12px 20px;
+         font-size: 18px;
+         }
+         button {
+         color: #ffffff !important;
+         background-color: #3e3e3e !important;
+         height:50px;
+         width:120px; 
+         border-radius: 16px;
+         border: none;
+         outline: none;
+         pointer-events: none;
+         font-size: 14px;
+         }
+         .custom-file-upload {
+         cursor: pointer; 
+         display: block;
+         margin-top: 50px;
+         }
+         input[type=file] {
+         display: none;
+         }
+         .leftDiv {
+         width: 48%;
+         float: left;
+         }
+         .rightDiv {
+         width: 48%;
+         float: right;
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+         <h3 >
+            <span style="font-weight: 700; font-size: 1.5rem;">NLP Pipeline for Unstructured Cinical Data<span style="font-weight: 700;"></span>
+            </span>
+            <br>
+         </h3>
+         <br></br>
+         <div>
+            <div class="leftDiv">
+               <form class ="center" action="/" method="POST"  name="form" style="padding: 10px;">
+                  <div>
+                     <textarea placeholder="Enter clinical note" rows="4" cols="50"  name="message" ></textarea>
+                  </div>
+                  <div>
+                     <input type="submit" value="Predict">
+                  </div>
+               </form>
+               <br></br>
+               <p style="margin-left:100px;font-weight: 800; font-size: 18px; color:red;">  Predicted ICD-10 Diagnosis Code: {{code}}
+               </p>
+            </div>
+            <div class="rightDiv">
+               <div class="center-bottom">
+                  <form  action="/"  method="POST" enctype="multipart/form-data">
+                     <label for="file" class="custom-file-upload">
+                     <button type="button">
+                     Upload and Convert
+                     </button>
+                     </label>
+                     <input class ="center" id="file" name="file" type="file" accept=".csv" onchange="javascript:this.form.submit();"/>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
