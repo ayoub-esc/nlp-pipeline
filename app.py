@@ -44,7 +44,6 @@ DATA_PATH = app.root_path + '/data/'
 MODEL_PATH = app.root_path + '/models/'
 xlnet = xlnet_model()
 xlnet_tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased')
-xlnet = xlnet_model()
 xlnet.load_weights(MODEL_PATH + "xlnet_finetuned.h5")
 encoder = preprocessing.LabelEncoder()
 encoder.classes_ = np.load(MODEL_PATH + 'encoder.npy', allow_pickle=True)
