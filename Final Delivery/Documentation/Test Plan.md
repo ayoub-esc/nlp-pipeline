@@ -1,3 +1,0 @@
-The data directory of this github contains the file used for validation - test.csv and a sample test file including a small subset of MIMIC-III cinical notes from test.csv that can be uploaded to the pipeline for testing purposes. The test_expected_codes.csv details the expected response. A custom csv file can be used as long as it is in the same format as test_notes.csv: "clinical note #1" , "clinical note #2"...
-
-WARNING: Please do not upload large test files as it will crash the deployment.
