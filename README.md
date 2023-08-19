@@ -1,4 +1,4 @@
-# Practicum Project NLP Pipeline for Unstructured Cinical Data 
+# Practicum Project NLP Pipeline for Unstructured Clinical Data 
 
 The model directory cotains a file with the model weights that can be used to load the mode and the encoder file from sklearn.preprocessing.LabelEncoder() to map model out outs to ICD-10 codes.
 
